@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--&lt;!&ndash;库存页面添加筛选&ndash;&gt;-->
+    <record id="quant_search_view" model="ir.ui.view">
+        <field name="name">stock.quant.search</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.quant_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[1]" position="after">
+                <group expand='0' string='Filters'>
+                    <separator/>
+                    <filter string="Unqualified area" name="unqualified" domain="[('location_id.defects','=',True)]" />
+                    <filter string="Qualified zone" name="qualified" domain="[('location_id.defects','=',False)]" />
+                    <separator/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

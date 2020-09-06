@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+        <!-- view used for product.template only -->
+        <record model="ir.ui.view" id="product_product_form_view_defects_location_button">
+            <field name="name">product.product_defects_location</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>
+            <field name="arch" type="xml">
+                <data>
+                    <button name="%(stock.product_open_quants)d" position="before">
+                        <button type="action"
+                            name="%(stock.product_open_quants)d"
+                            attrs="{'invisible':[('type', '!=', 'product')]}"
+                            context="{'search_default_qualified': 1}"
+                            class="oe_stat_button" icon="fa-building-o">
+                            <field name="qty_available_no_defects" widget="statinfo" string="On Hand No Defects"/>
+                        </button>
+                    </button>
+                </data>
+            </field>
+        </record>
+
+        <!-- view used for product.template only -->
+        <record model="ir.ui.view" id="product_template_form_view_defects_button">
+            <field name="name">product.template_defects_button</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <button name="action_open_quants" position="before">
+                        <button type="object"
+                            name="action_open_quants"
+                            context="{'search_default_qualified': 1}"
+                            attrs="{'invisible':[('type', '!=', 'product')]}"
+                            class="oe_stat_button" icon="fa-building-o">
+                            <field name="qty_available_no_defects" widget="statinfo" string="On Hand No Defects"/>
+                        </button>
+                    </button>
+                </data>
+            </field>
+        </record>
+  </data>
+</odoo>
