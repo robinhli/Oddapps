@@ -10,10 +10,16 @@
                     <button name="%(stock.product_open_quants)d" position="before">
                         <button type="action"
                             name="%(stock.product_open_quants)d"
-                            attrs="{'invisible':[('type', '!=', 'product')]}"
+                            icon="fa-building-o"
                             context="{'search_default_qualified': 1}"
-                            class="oe_stat_button" icon="fa-building-o">
-                            <field name="qty_available_no_defects" widget="statinfo" string="On Hand No Defects"/>
+                            attrs="{'invisible':[('type', '!=', 'product')]}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="qty_available_no_defects" widget="statinfo" nolabel="1"/>
+                                    <field name="uom_name"/>
+                                </span>
+                                <span class="o_stat_text">On Hand No Defects</span>
+                            </div>
                         </button>
                     </button>
                 </data>
@@ -33,7 +39,13 @@
                             context="{'search_default_qualified': 1}"
                             attrs="{'invisible':[('type', '!=', 'product')]}"
                             class="oe_stat_button" icon="fa-building-o">
-                            <field name="qty_available_no_defects" widget="statinfo" string="On Hand No Defects"/>
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value" widget="statinfo">
+                                    <field name="qty_available_no_defects" widget="statinfo"  nolabel="1" class="mr4"/>
+                                    <field name="uom_name"/>
+                                </span>
+                                <span class="o_stat_text">On Hand No Defects</span>
+                            </div>
                         </button>
                     </button>
                 </data>
