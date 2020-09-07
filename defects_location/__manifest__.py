@@ -22,7 +22,7 @@
 
     # any module necessary for this one to work correctly
     'depends': ['stock'],
-    'images':  ['static/images/main_screenshot.png', 'static/images/main_1.png', 'static/images/main_2.png'],
+    'images':  ['static/description/main_screenshot.png', 'static/description/main_1.png', 'static/description/main_2.png'],
 
 
     # always loaded
