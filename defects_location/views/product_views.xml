@@ -7,9 +7,9 @@
             <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>
             <field name="arch" type="xml">
                 <data>
-                    <button name="%(stock.product_open_quants)d" position="before">
+                    <button name="action_open_quants" position="before">
                         <button type="action"
-                            name="%(stock.product_open_quants)d"
+                            name="action_open_quants"
                             icon="fa-building-o"
                             context="{'search_default_qualified': 1}"
                             attrs="{'invisible':[('type', '!=', 'product')]}">
