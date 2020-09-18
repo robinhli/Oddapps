@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="maintenance_product_view_search" model="ir.ui.view">
+        <field name="name">maintenance.product.search</field>
+        <field name="model">equipment.product</field>
+        <field name="arch" type="xml">
+            <search string="Search Maintenance Product">
+                <field name="product_id"/>
+                <field name="routing_id"/>
+                <filter string="With Routing" domain="[('routing_id', '!=', False)]" name="routing"/>
+                <filter string="Without Routing" domain="[('routing_id', '=', False)]" name="routing"/>
+                <group  expand='0' string='Group by...'>
+                    <filter string='Routing' name="routing_filter" domain="[]" context="{'group_by' : 'routing_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_product_view_form">
+        <field name="name">maintenance.product.form</field>
+        <field name="model">equipment.product</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance Product">
+                <sheet>
+                    <group>
+                        <field name="product_id" options="{'no_create':True}"/>
+                        <field name="routing_id"/>
+                        <field name="workcenter_id"/>
+                    </group>
+                    <group>
+                        <field name="duration_per"/>
+                    </group>
+                    <notebook>
+                        <page string="Equipments">
+                            <field name="equipment_line_ids" >
+                                <tree delete="0" editable="bottom">
+                                    <field name="category_id" invisible="1"/>
+                                    <field name="equipment_id" options="{'no_create':True, 'no_open': True}"/>
+                                    <field name="duration_per" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="maintenance_product_view_tree">
+        <field name="name">maintenance.product.tree</field>
+        <field name="model">equipment.product</field>
+        <field name="arch" type="xml">
+            <tree string="Maintenance Product">
+                <field name="product_id"/>
+                <field name="routing_id"/>
+                <field name="duration_per"/>
+            </tree>
+        </field>
+    </record>
+    <record id="maintenance_product_action_reports" model="ir.actions.act_window">
+        <field name="name">Maintenance Product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">equipment.product</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="maintenance_product_view_tree"/>
+        <field name="search_view_id" ref="maintenance_product_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new maintenance product
+            </p>
+            <p>
+            </p>
+        </field>
+    </record>
+    <menuitem
+            id="maintenance_product_reporting"
+            name="Maintenance Product"
+            action="maintenance_product_action_reports"
+            parent="mrp.menu_mrp_configuration"
+            sequence="1000"/>
+</odoo>

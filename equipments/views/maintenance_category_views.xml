@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="ds_equipment_category_view_form">
+        <field name="name">ds.equipment.category.form</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form"/>
+        <field name="arch" type="xml">
+            <field name="technician_user_id" position="before">
+                <!--<field name="equipment_model"/>-->
+                <field name="workcenter_id" options="{'no_create':True}"/>
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="ds_equipment_category_view_tree">
+        <field name="name">ds.equipment.category.tree</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="technician_user_id" position="before">
+                <field name="workcenter_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="maintenance.hr_equipment_category_action" model="ir.actions.act_window">
+        <field name="domain">[('id','!=',False)]</field>
+    </record>
+
+</odoo>

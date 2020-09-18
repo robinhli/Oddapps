@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="ds_equipment_view_form">
+        <field name="name">ds.maintenance.equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='%(maintenance.hr_equipment_request_action_from_equipment)d']" position="before">
+                <button name="action_equipment_used" class="oe_stat_button" icon="fa-arrow-up"
+                        type="object">
+                    <field name="workorder_number" widget="statinfo" string="Workorders"/>
+                </button>
+            </xpath>
+            <field name="category_id" position="replace">
+                <field name="category_id" options="{'no_open': True, 'no_create':True}"/>
+                <field name="state"/>
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="ds_equipment_view_tree">
+        <field name="name">ds.maintenance.equipment.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="state"/>
+            </field>
+        </field>
+    </record>
+</odoo>

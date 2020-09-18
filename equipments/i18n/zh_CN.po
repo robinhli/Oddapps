@@ -1,0 +1,270 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* equipments
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200826\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-18 09:10+0000\n"
+"PO-Revision-Date: 2020-09-18 09:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: equipments
+#: model_terms:ir.actions.act_window,help:equipments.maintenance_product_action_reports
+msgid "Add a new maintenance product"
+msgstr ""
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__category_id
+msgid "Category"
+msgstr "设备类型"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__create_uid
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__create_date
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__duration_per
+msgid "Default Duration(s)"
+msgstr "缺省时间(秒)"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__display_name
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__duration_per
+msgid "Duration Per Unit(s)"
+msgstr "每单位持续时间(秒)"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__equipment_id
+#: model:ir.model.fields,field_description:equipments.field_mrp_production__equipment_id
+#: model:ir.model.fields,field_description:equipments.field_mrp_workorder__equipment_id
+msgid "Equipment"
+msgstr "设备"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__equipment_line_ids
+msgid "Equipment Line"
+msgstr "生产线"
+
+#. module: equipments
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_form
+msgid "Equipments"
+msgstr "设备"
+
+#. module: equipments
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_search
+msgid "Group by..."
+msgstr "分组"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__id
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__id
+msgid "ID"
+msgstr ""
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product____last_update
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line____last_update
+msgid "Last Modified on"
+msgstr "最后修改于"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__write_uid
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__write_date
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product_line__main_product_id
+msgid "Main Product"
+msgstr "产品"
+
+#. module: equipments
+#: model:ir.model,name:equipments.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "设备保养"
+
+#. module: equipments
+#: model:ir.model,name:equipments.model_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr "维护设备类别"
+
+#. module: equipments
+#: model:ir.actions.act_window,name:equipments.maintenance_product_action_reports
+#: model:ir.ui.menu,name:equipments.maintenance_product_reporting
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_form
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_tree
+msgid "Maintenance Product"
+msgstr "产品设备"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#, python-format
+msgid "Preventive Maintenance - %s"
+msgstr "预防性维护 - %s"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: equipments
+#: model:ir.model,name:equipments.model_mrp_production
+msgid "Production Order"
+msgstr "生产订单"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__routing_id
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_search
+msgid "Routing"
+msgstr "路径"
+
+#. module: equipments
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_search
+msgid "Search Maintenance Product"
+msgstr ""
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_maintenance_equipment__state
+msgid "State"
+msgstr "状态"
+
+#. module: equipments
+#: model:ir.model.constraint,message:equipments.constraint_equipment_product_line_product_equipment_id_uniq
+msgid "The equipment must be unique!"
+msgstr "设备必须唯一"
+
+#. module: equipments
+#: model:ir.model,name:equipments.model_equipment_product_line
+msgid "The equipment used by producing the product, and producing attributes"
+msgstr ""
+
+#. module: equipments
+#: model:ir.model.constraint,message:equipments.constraint_equipment_product_product_id_uniq
+msgid "The product must be unique!"
+msgstr "产品必须唯一"
+
+#. module: equipments
+#: model:ir.model.fields,help:equipments.field_equipment_product__duration_per
+msgid "The seconds used to produce one unit of product"
+msgstr "生产一件产品需要的秒数"
+
+#. module: equipments
+#: model:ir.model.fields,help:equipments.field_equipment_product_line__duration_per
+msgid "The seconds used to produce one unit of product with this equipment"
+msgstr "使用该设备生产一件产品需要的秒数"
+
+#. module: equipments
+#: model:ir.model.constraint,message:equipments.constraint_maintenance_equipment_serial_no_uniq
+msgid "The serial no must be unique!"
+msgstr "序列号必须唯一"
+
+#. module: equipments
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_search
+msgid "With Routing"
+msgstr "有路径"
+
+#. module: equipments
+#: model_terms:ir.ui.view,arch_db:equipments.maintenance_product_view_search
+msgid "Without Routing"
+msgstr "无路径"
+
+#. module: equipments
+#: model:ir.model,name:equipments.model_mrp_workorder
+msgid "Work Order"
+msgstr "工单"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_equipment_product__workcenter_id
+#: model:ir.model.fields,field_description:equipments.field_maintenance_equipment_category__workcenter_id
+msgid "Workcenter"
+msgstr "工作中心"
+
+#. module: equipments
+#: model:ir.model.fields,field_description:equipments.field_maintenance_equipment__workorder_number
+msgid "Workorder Number"
+msgstr "工单数"
+
+#. module: equipments
+#: model_terms:ir.ui.view,arch_db:equipments.ds_equipment_view_form
+msgid "Workorders"
+msgstr "工单"
+
+#. module: equipments
+#: model:ir.model,name:equipments.model_equipment_product
+msgid "equipment.product"
+msgstr ""
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__free
+#, python-format
+msgid "free"
+msgstr "空闲"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__inside_maintain
+#, python-format
+msgid "inside_maintain"
+msgstr "内部维护"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__outside_help
+#, python-format
+msgid "outside_help"
+msgstr "外协"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__outside_maintain
+#, python-format
+msgid "outside_maintain"
+msgstr "外部维护"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__pm_maintain
+#, python-format
+msgid "pm_maintain"
+msgstr "定期维护"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__repair
+#, python-format
+msgid "repair"
+msgstr "维修"
+
+#. module: equipments
+#: code:addons/equipments/models/equipment.py:0
+#: model:ir.model.fields.selection,name:equipments.selection__maintenance_equipment__state__run
+#, python-format
+msgid "run"
+msgstr "运行"

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenance_product_user,maintenance.product,model_equipment_product,base.group_user,1,0,0,0
+access_maintenance_product_admin_user,maintenance.product,model_equipment_product,maintenance.group_equipment_manager,1,1,1,0
+access_model_product_equipment,model.equipment_product_line,model_equipment_product_line,maintenance.group_equipment_manager,1,1,1,1
