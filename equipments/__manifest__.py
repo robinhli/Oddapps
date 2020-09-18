@@ -23,6 +23,12 @@
 
     # any module necessary for this one to work correctly
     'depends': ['maintenance', 'mrp'],
+    'images': ['static/description/main_screenshot.png',
+               'static/description/Equipment.png',
+               'static/description/Equipment_category.png',
+               'static/description/Product_equipment.png',
+               'static/description/WO_equipment.png',
+               ],
 
     # always loaded
     'data': [
@@ -33,4 +39,5 @@
         'views/product_maintenance_views.xml',
         'views/mrp_workorder_views.xml',
     ],
+    "license": "AGPL-3",
 }
