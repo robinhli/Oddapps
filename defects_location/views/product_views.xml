@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <data>
                     <button name="action_open_quants" position="before">
-                        <button type="action"
+                        <button type="object"
                             name="action_open_quants"
                             icon="fa-building-o"
                             context="{'search_default_qualified': 1}"
