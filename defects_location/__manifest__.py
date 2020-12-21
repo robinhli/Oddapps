@@ -11,7 +11,7 @@
         库存页面，增加筛选“合格品区”，“不合格品区”
     """,
 
-    'author': "Dashu Tech",
+    'author': "Dashu-Tech",
     'website': "http://www.dashu-tech.com",
 
     # Categories can be used to filter modules in modules listing
