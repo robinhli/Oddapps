@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ds_product_spec
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20201002\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-22 13:07+0000\n"
+"PO-Revision-Date: 2021-05-22 13:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ds_product_spec
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_product__display_name
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_template__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ds_product_spec
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_product__id
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_template__id
+msgid "ID"
+msgstr ""
+
+#. module: ds_product_spec
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_product____last_update
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ds_product_spec
+#: model:ir.model,name:ds_product_spec.model_product_product
+msgid "Product"
+msgstr "产品"
+
+#. module: ds_product_spec
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_product__product_spec
+#: model:ir.model.fields,field_description:ds_product_spec.field_product_template__product_spec
+msgid "Product Specification"
+msgstr "规格"
+
+#. module: ds_product_spec
+#: model:ir.model,name:ds_product_spec.model_product_template
+msgid "Product Template"
+msgstr "产品模板"
