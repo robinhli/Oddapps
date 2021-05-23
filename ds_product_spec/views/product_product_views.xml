@@ -1,0 +1,27 @@
+
+<odoo>
+    <data>
+        <record id="product_product_tree_view_spec" model="ir.ui.view">
+            <field name="name">product.product.product.tree.spec</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="product_spec"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--<record id="product_product_form_view_spec" model="ir.ui.view">-->
+            <!--<field name="name">product.product.form.spec</field>-->
+            <!--<field name="model">product.product</field>-->
+            <!--<field name="inherit_id" ref="product.product_variant_easy_edit_view"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<xpath expr="//field[@name='default_code']" position="after">-->
+                    <!--<field name="product_spec"/>-->
+                <!--</xpath>-->
+            <!--</field>-->
+        <!--</record>-->
+    </data>
+</odoo>
+
