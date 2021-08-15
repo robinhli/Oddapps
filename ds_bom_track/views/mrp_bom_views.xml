@@ -1,0 +1,16 @@
+
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="mrp_bom_track_form">
+      <field name="name">mrp.bom.form.track form</field>
+      <field name="model">mrp.bom</field>
+      <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+      <field name="arch" type="xml">
+          <field name="message_ids" position="before">
+              <field name="activity_ids"/>
+          </field>
+      </field>
+    </record>
+  </data>
+</odoo>
+
