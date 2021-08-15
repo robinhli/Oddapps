@@ -3,10 +3,10 @@
     'name': "ds_bom_track",
 
     'summary': """
-        Add tracking to BOM and line fields to track the BOM line change""",
+        Add tracking to BOM and line fields to track the BOM line change. Free download at https://github.com/robinhli/Oddapps""",
 
     'description': """
-        Add tracking to BOM and line fields to track the BOM order line change
+        Add tracking to BOM and line fields to track the BOM line change
     """,
 
     'author': "Dashu-Tech",

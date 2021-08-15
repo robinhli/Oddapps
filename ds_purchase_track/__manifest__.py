@@ -3,7 +3,7 @@
     'name': "ds_purchase_track",
 
     'summary': """
-        Add the tracking to purchase field. """,
+        Add the tracking to purchase field. Free download at https://github.com/robinhli/Oddapps""",
 
     'description': """
         Add the tracking to purchase field. 

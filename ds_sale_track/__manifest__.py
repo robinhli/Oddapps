@@ -3,7 +3,7 @@
     'name': "ds_sale_track",
 
     'summary': """
-        Add tracking to sale order and line fields to track the sale order line change""",
+        Add tracking to sale order and line fields to track the sale order line change. Free download at https://github.com/robinhli/Oddapps""",
 
     'description': """
         Add tracking to sale order and line fields to track the sale order line change

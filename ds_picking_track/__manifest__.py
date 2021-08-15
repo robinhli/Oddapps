@@ -3,7 +3,7 @@
     'name': "ds_picking_track",
 
     'summary': """
-        Add tracking to picking/move field""",
+        Add tracking to picking/move field. Free download at https://github.com/robinhli/Oddapps""",
 
     'description': """
         Add tracking to picking/move field
