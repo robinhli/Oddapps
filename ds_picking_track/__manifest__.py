@@ -21,8 +21,6 @@
 
     # any module necessary for this one to work correctly
     'depends': ['ds_mail_track', 'stock'],
-    'price': 0.99,
-    'currency': 'EUR',
     "license": "LGPL-3",
     'support': 'lihaibin@dashu-tech.com',
 
