@@ -8,6 +8,11 @@ class Purchaes(models.Model):
     order_line = fields.One2many('purchase.order.line', 'order_id', string='Order Lines', tracking=True,
                                  states={'cancel': [('readonly', True)], 'done': [('readonly', True)]}, copy=True)
 
+    def write(self, vals):
+        res = super(Purchaes, self).write(vals)
+
+        return res
+
 class PurchaseLine(models.Model):
     _inherit = 'purchase.order.line'
 

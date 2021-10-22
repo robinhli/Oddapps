@@ -3,7 +3,7 @@
     'name': "ds_sale_track",
 
     'summary': """
-        Add tracking to sale order and line fields to track the sale order line change. Free download at https://github.com/robinhli/Oddapps""",
+        Add tracking to sale order and line fields to track the sale order line change""",
 
     'description': """
         Add tracking to sale order and line fields to track the sale order line change
@@ -17,11 +17,11 @@
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Sales/Sales',
-    'version': '14.0.0.1',
+    'version': '15.0.0.1',
 
     # any module necessary for this one to work correctly
     'depends': ['ds_mail_track', 'sale'],
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     'support': 'lihaibin@dashu-tech.com',
 
 }
