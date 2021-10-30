@@ -17,6 +17,7 @@
     # for the full list
     'category': 'Operations/Inventory',
     'version': '13.0.0.1',
+    'images': ['static/description/main_screenshot.png'],
 
     # any module necessary for this one to work correctly
     'depends': ['stock'],
