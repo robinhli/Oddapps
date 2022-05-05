@@ -2,11 +2,13 @@
 
 from odoo import models, fields, api
 
+
 class Purchaes(models.Model):
     _inherit = 'purchase.order'
 
     order_line = fields.One2many('purchase.order.line', 'order_id', string='Order Lines', tracking=True,
                                  states={'cancel': [('readonly', True)], 'done': [('readonly', True)]}, copy=True)
+
 
 class PurchaseLine(models.Model):
     _inherit = 'purchase.order.line'
@@ -17,3 +19,9 @@ class PurchaseLine(models.Model):
     product_uom = fields.Many2one('uom.uom', string='Unit of Measure', tracking=True, domain="[('category_id', '=', product_uom_category_id)]")
     product_id = fields.Many2one('product.product', string='Product', domain=[('purchase_ok', '=', True)], change_default=True, tracking=True)
     price_unit = fields.Float(string='Unit Price', required=True, digits='Product Price', tracking=True)
+
+    origin_sale_line_id = fields.Many2one('sale.order.line', tracking=True)
+
+    def track_display(self):
+        self.ensure_one()
+        return "%s, %s, %s" % (self.product_id.display_name, self.product_qty, self.product_uom.name)

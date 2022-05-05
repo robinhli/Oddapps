@@ -26,3 +26,7 @@ class SaleOrderLine(models.Model):
                                    default=1.0, tracking=True)
     product_uom = fields.Many2one('uom.uom', string='Unit of Measure', tracking=True,
                                   domain="[('category_id', '=', product_uom_category_id)]")
+
+    def track_display(self):
+        self.ensure_one()
+        return "%s, %s, %s" % (self.product_id.display_name, self.product_uom_qty, self.product_uom.name)

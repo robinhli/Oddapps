@@ -8,6 +8,7 @@ class MrpBom(models.Model):
 
     bom_line_ids = fields.One2many('mrp.bom.line', 'bom_id', 'BoM Lines', copy=True, tracking=True)
 
+
 class MrpBOMLine(models.Model):
     _inherit = 'mrp.bom.line'
 
@@ -24,3 +25,7 @@ class MrpBOMLine(models.Model):
         'mrp.routing.workcenter', 'Consumed in Operation', check_company=True, tracking=True,
         domain="[('routing_id', '=', routing_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]",
         help="The operation where the components are consumed, or the finished products created.")
+
+    def track_display(self):
+        self.ensure_one()
+        return "%s, %s, %s" % (self.product_id.display_name, self.product_qty, self.product_uom_id.name)

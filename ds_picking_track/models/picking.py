@@ -2,14 +2,15 @@
 
 from odoo import models, fields, api
 
+
 class Picking(models.Model):
     _inherit = 'stock.picking'
 
     move_lines = fields.One2many('stock.move', 'picking_id', string="Stock Moves", copy=True, tracking=True)
 
+
 class StockMove(models.Model):
     _inherit = "stock.move"
-
 
     product_id = fields.Many2one(
         'product.product', 'Product',
@@ -43,3 +44,9 @@ class StockMove(models.Model):
              "* Waiting Availability: This state is reached when the procurement resolution is not straight forward. It may need the scheduler to run, a component to be manufactured...\n"
              "* Available: When products are reserved, it is set to \'Available\'.\n"
              "* Done: When the shipment is processed, the state is \'Done\'.")
+
+    origin_sale_line_id = fields.Many2one('sale.order.line', tracking=True)
+
+    def track_display(self):
+        self.ensure_one()
+        return "%s, %s, %s" % (self.product_id.display_name, self.product_uom_qty, self.product_uom.name)

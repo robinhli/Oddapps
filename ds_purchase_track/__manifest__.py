@@ -19,7 +19,7 @@
     'version': '13.0.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['ds_mail_track', 'purchase'],
+    'depends': ['ds_mail_track', 'ds_origin_track'],
     'images': ['static/description/main_screenshot.png'],
     "license": "LGPL-3",
     'support': 'lihaibin@dashu-tech.com',
