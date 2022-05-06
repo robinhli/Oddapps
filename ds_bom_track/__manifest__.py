@@ -3,10 +3,10 @@
     'name': "ds_bom_track",
 
     'summary': """
-        Add tracking to BOM and line fields to track the BOM line change. Free download at https://github.com/robinhli/Oddapps""",
+        Add tracking to BOM and line fields to track the BOM line change""",
 
     'description': """
-        Add tracking to BOM and line fields to track the BOM line change
+        Add tracking to BOM and line fields to track the BOM order line change
     """,
 
     'author': "Dashu-Tech",
@@ -25,6 +25,7 @@
     'data': ['views/mrp_bom_views.xml',
              ],
 
-    "license": "LGPL-3",
+    "license": "AGPL-3",
+    'installable': True,
     'support': 'lihaibin@dashu-tech.com',
 }

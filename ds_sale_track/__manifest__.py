@@ -3,7 +3,7 @@
     'name': "ds_sale_track",
 
     'summary': """
-        Add tracking to sale order and line fields to track the sale order line change. Free download at https://github.com/robinhli/Oddapps""",
+        Add tracking to sale order and line fields to track the sale order line change""",
 
     'description': """
         Add tracking to sale order and line fields to track the sale order line change
@@ -21,7 +21,8 @@
 
     # any module necessary for this one to work correctly
     'depends': ['ds_mail_track', 'sale'],
-    "license": "LGPL-3",
+    'installable': True,
+    "license": "AGPL-3",
     'support': 'lihaibin@dashu-tech.com',
 
 }

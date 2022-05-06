@@ -2,11 +2,13 @@
 
 from odoo import models, fields, api
 
+
 class MrpBom(models.Model):
     _name = 'mrp.bom'
     _inherit = ['mrp.bom', 'mail.thread', 'mail.activity.mixin']
 
     bom_line_ids = fields.One2many('mrp.bom.line', 'bom_id', 'BoM Lines', copy=True, tracking=True)
+
 
 class MrpBOMLine(models.Model):
     _inherit = 'mrp.bom.line'
@@ -24,4 +26,7 @@ class MrpBOMLine(models.Model):
         'mrp.routing.workcenter', 'Consumed in Operation', check_company=True,
         domain="[('id', 'in', allowed_operation_ids)]", tracking=True,
         help="The operation where the components are consumed, or the finished products created.")
+
+    def track_display(self):
+        return {rec.id: "%s, %s, %s" % (rec.product_id.display_name, rec.product_qty, rec.product_uom_id.name) for rec in self}
 

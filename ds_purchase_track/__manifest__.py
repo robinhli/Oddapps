@@ -3,7 +3,7 @@
     'name': "ds_purchase_track",
 
     'summary': """
-        Add the tracking to purchase field. Free download at https://github.com/robinhli/Oddapps""",
+        Add the tracking to purchase field. """,
 
     'description': """
         Add the tracking to purchase field. 
@@ -22,7 +22,8 @@
     # any module necessary for this one to work correctly
     'depends': ['ds_mail_track', 'purchase'],
 
-    "license": "LGPL-3",
+    "license": "AGPL-3",
+    'installable': True,
     'support': 'lihaibin@dashu-tech.com',
 
 }

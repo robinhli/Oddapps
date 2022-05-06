@@ -43,3 +43,6 @@ class StockMove(models.Model):
              "* Waiting Availability: This state is reached when the procurement resolution is not straight forward. It may need the scheduler to run, a component to be manufactured...\n"
              "* Available: When products are reserved, it is set to \'Available\'.\n"
              "* Done: When the shipment is processed, the state is \'Done\'.")
+
+    def track_display(self):
+        return {rec.id: "%s, %s, %s" % (rec.product_id.display_name, rec.product_uom_qty, rec.product_uom.name) for rec in self}
