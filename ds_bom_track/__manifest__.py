@@ -25,7 +25,7 @@
     'data': ['views/mrp_bom_views.xml',
              ],
 
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     'installable': True,
     'support': 'lihaibin@dashu-tech.com',
 }

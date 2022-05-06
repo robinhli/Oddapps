@@ -22,7 +22,7 @@
     # any module necessary for this one to work correctly
     'depends': ['ds_mail_track', 'purchase'],
 
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     'installable': True,
     'support': 'lihaibin@dashu-tech.com',
 
